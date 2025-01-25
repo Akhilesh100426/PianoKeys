@@ -18,7 +18,6 @@ A simple and interactive virtual piano built using HTML, CSS, and JavaScript. Pl
 1. Clone this repository:  
    ```bash  
    git clone https://github.com/Akhilesh100426/PianoKeys.git  
-# PianoKeys
 
 # Keyboard Mapping 🎹
 
