@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>
+            Piano key
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="piano.css">
+    </head>
+    <body>
+        <div id="landscape-alert">
+            Please rotate your device to landscape mode to use the piano.
+        </div>
+        <h1>Piano</h1>
+        <div class="wrapper">
+            <div class="piano">
+            <div data-note="c" class="key white">
+                <span class="note-label">C</span>
+                <audio src="c(2).mp3" id="c"></audio>
+            </div>
+            <div data-note="db" class="key black">
+                <span class="note-label">DB</span>
+                <audio src="db.mp3" id="db"></audio>
+            </div>
+            <div data-note="d" class="key white">
+                <span class="note-label">D</span>
+                <audio src="d.mp3" id="d"></audio>
+            </div>
+            <div data-note="eb" class="key black">
+                <span class="note-label ">EB</span>
+                <audio src="eb.mp3" id="eb"></audio>
+            </div>
+            <div data-note="e" class="key white">
+                <span class="note-label">E</span>
+                <audio src="e.mp3" id="e"></audio>
+            </div>
+            <div data-note="f" class="key white">
+                <span class="note-label">F</span>
+                <audio src="f.mp3" id="f"></audio>
+            </div>
+            <div data-note="gb" class="key black">
+                <span class="note-label">GB</span>
+                <audio src="gb.mp3" id="gb"></audio> 
+            </div>
+            <div data-note="g" class="key white">
+                <span class="note-label">G</span>
+                <audio src="g.mp3" id="g"></audio>
+            </div>
+            <div data-note="ab" class="key black">
+                <span class="note-label">AB</span>
+                <audio src="ab.mp3" id="ab"></audio>
+            </div>
+            <div data-note="a" class="key white">
+                <span class="note-label">A</span>
+                <audio src="a.mp3" id="a"></audio>
+            </div>
+            <div data-note="bb" class="key black">
+                <span class="note-label">BB</span>
+                <audio src="bb.mp3" id="bb"></audio>
+            </div>
+            <div data-note="b" class="key white">
+                <span class="note-label">B</span>
+                <audio src="b.mp3" id="b"></audio>
+            </div>
+        </div>
+
+        </div>
+        <script>
+            // Landscape detection
+            function checkOrientation() {
+                const alertBox = document.getElementById('landscape-alert');
+                if (window.innerWidth < window.innerHeight) {
+                    alertBox.style.display = 'flex';
+                } else {
+                    alertBox.style.display = 'none';
+                }
+            }
+    
+            window.addEventListener('resize', checkOrientation);
+            window.addEventListener('load', checkOrientation);
+        </script>
+
+
+        <script src="piano.js"></script>
+
+    </body>
+</html>
